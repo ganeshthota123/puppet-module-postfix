@@ -2,8 +2,12 @@
 #
 # Facts specified here will override the values provided by rspec-puppet-facts.
 ---
+ipaddress: "172.16.254.254"
 networking:
   ip: "172.16.254.254"
   ip6: "FE80:0000:0000:0000:AAAA:AAAA:AAAA"
   mac: "AA:AA:AA:AA:AA:AA"
-is_pe: false
+  # Change these three keys to match the fixture expectations:
+  hostname: "foo"
+  domain: "example.com"
+  fqdn: "foo.example.com"
