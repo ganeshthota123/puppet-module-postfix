@@ -17,5 +17,6 @@ jobs:
     needs: Spec
     uses: "puppetlabs/cat-github-actions/.github/workflows/module_acceptance.yml@main"
     with:
-      options: '--exclude=centos-8 --exclude=rocky-8 --exclude=almalinux-8'
+      env: |
+        EXCLUDE_PLATFORMS=centos-8,rocky-8,almalinux-8
     secrets: "inherit"
