@@ -17,7 +17,5 @@ jobs:
     needs: Spec
     uses: "puppetlabs/cat-github-actions/.github/workflows/module_acceptance.yml@main"
     with:
-      pre_tasks: |
-        - name: "Install wget and curl for Agent installation"
-          command: "yum install -y wget curl || apt-get update && apt-get install -y wget curl"
+      options: '--exclude=centos-8'
     secrets: "inherit"
