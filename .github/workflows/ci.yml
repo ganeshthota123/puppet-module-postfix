@@ -19,4 +19,6 @@ jobs:
     with:
       env: |
         EXCLUDE_PLATFORMS=centos-8,rocky-8,almalinux-8
+      # Litmus ఏజెంట్‌ను ఇన్‌స్టాల్ చేసేటప్పుడు భారీ గిట్ హిస్టరీ డౌన్‌లోడ్ కాకుండా ఇది ఆపుతుంది
+      flags: "--shallow-clone"
     secrets: "inherit"
