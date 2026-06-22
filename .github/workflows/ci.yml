@@ -17,8 +17,9 @@ jobs:
     needs: Spec
     uses: "puppetlabs/cat-github-actions/.github/workflows/module_acceptance.yml@main"
     with:
-      env: |
-        EXCLUDE_PLATFORMS=centos-8,rocky-8,almalinux-8
-      # Litmus ఏజెంట్‌ను ఇన్‌స్టాల్ చేసేటప్పుడు భారీ గిట్ హిస్టరీ డౌన్‌లోడ్ కాకుండా ఇది ఆపుతుంది
+      # FIX: Pass the exclusions into the dedicated 'platform_exclusions' parameter
+      platform_exclusions: "centos-8,rocky-8,almalinux-8"
+      
+      # Litmus
       flags: "--shallow-clone"
     secrets: "inherit"
